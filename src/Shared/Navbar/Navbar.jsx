@@ -4,10 +4,14 @@ import logo from '../../assets/logo.svg'
 const Navbar = () => {
   const navLinks =
     <>
-      <li><a>Item 1</a></li>
+      <li><Link to="/">Home</Link></li>
+      <li><Link to="/about">About</Link></li>
+      <li><Link to="/services">Services</Link></li>
+      <li><Link to="/blog">Blog</Link></li>
+      <li><Link to="/contac">Contact</Link></li>
     </>
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 h-28 mb-4">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -17,7 +21,7 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <Link to="/" className="btn btn-ghost text-xl"><img src={logo} alt="" /></Link>
+        <Link to="/" ><img src={logo} alt="" /></Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -25,7 +29,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+      <button class="btn btn-outline btn-warning">Appointment</button>
       </div>
     </div>
   );
